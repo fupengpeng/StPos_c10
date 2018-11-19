@@ -8,7 +8,7 @@ import dagger.Component;
  * @date 2018/11/19 9:48
  */
 
-//@Component
+@Component
 public interface LoginActivityComponent {
 
     void injectLoginActivity(LoginActivity loginActivity);

@@ -9,8 +9,10 @@ import android.widget.Toast;
 
 import com.sangto.stpos_c10.R;
 import com.sangto.stpos_c10.bean.User;
-import com.sangto.stpos_c10.interf.Login;
+import com.sangto.stpos_c10.interf.LoginContract;
 import com.sangto.stpos_c10.presenter.LoginPresenter;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,7 +24,7 @@ import butterknife.OnClick;
  * @date 2018/11/19 9:38
  */
 
-public class LoginActivity extends AppCompatActivity implements Login.View {
+public class LoginActivity extends AppCompatActivity implements LoginContract.View {
 
 
     @BindView(R.id.et_aty_login_account)
@@ -30,7 +32,13 @@ public class LoginActivity extends AppCompatActivity implements Login.View {
     @BindView(R.id.et_aty_login_password)
     EditText etAtyLoginPassword;
 
-    private LoginPresenter mLoginPresenter;
+    @Inject
+    LoginPresenter mLoginPresenter;
+
+//    @Inject
+    public LoginActivity() {
+        DaggerLoginActivityComponent.create().injectLoginActivity(this);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
@@ -47,7 +55,7 @@ public class LoginActivity extends AppCompatActivity implements Login.View {
      * 初始化数据
      */
     private void initData() {
-        mLoginPresenter = new LoginPresenter(this);
+//        DaggerLoginActivityComponent.create().injectLoginActivity(this);
     }
 
     /**

@@ -8,7 +8,7 @@ import com.sangto.stpos_c10.bean.User;
  * @date 2018/11/19 9:42
  */
 
-public interface Login {
+public interface LoginContract {
 
     interface View {
 

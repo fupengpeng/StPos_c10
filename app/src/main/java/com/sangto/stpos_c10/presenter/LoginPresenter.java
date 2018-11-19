@@ -1,8 +1,10 @@
 package com.sangto.stpos_c10.presenter;
 
 import com.sangto.stpos_c10.bean.User;
-import com.sangto.stpos_c10.interf.Login;
+import com.sangto.stpos_c10.interf.LoginContract;
 import com.sangto.stpos_c10.ui.LoginActivity;
+
+import javax.inject.Inject;
 
 
 /**
@@ -11,12 +13,14 @@ import com.sangto.stpos_c10.ui.LoginActivity;
  * @date 2018/11/19 9:43
  */
 
-public class LoginPresenter implements Login.Presenter {
+public class LoginPresenter implements LoginContract.Presenter {
 
-    private LoginActivity mLoginActivity;
+//    @Inject
+    LoginActivity mLoginActivity;
 
-    public LoginPresenter(LoginActivity loginActivity) {
-        this.mLoginActivity = loginActivity;
+    @Inject
+    public LoginPresenter() {
+
     }
 
 
