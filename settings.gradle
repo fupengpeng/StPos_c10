@@ -1,0 +1,1 @@
+include ':app', ':stpos_c10_guest'
