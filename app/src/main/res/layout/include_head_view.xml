@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_70"
+            android:layout_marginRight="@dimen/dp_70"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20" />
+
+        <com.sangto.stpos_c10.view.TitleTab
+            android:id="@+id/title_tab_center"
+            android:layout_width="@dimen/dp_145"
+            android:layout_height="@dimen/dp_28"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/back"
+        style="@style/style_customer_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="false"
+        android:background="@drawable/head_view_icon_bg"
+        android:src="@mipmap/back" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:visibility="gone"
+        android:padding="@dimen/dp_15"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:src="@mipmap/close"
+        android:layout_alignParentRight="true" />
+    <ImageView
+        android:id="@+id/school_share"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_15"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:src="@mipmap/school_share" />
+    <ImageView
+        android:id="@+id/answer_setting"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_15"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:src="@mipmap/answer_setting" />
+    <ImageView
+        android:id="@+id/func"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/head_view_icon_bg_no_corner"
+        android:scaleType="center"
+        android:src="@mipmap/sys"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/func_tv"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_23"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/select_blue_square"
+        android:layout_centerVertical="true"
+        android:text="重新选择"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/sp_10"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/func_right"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_23"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@drawable/select_blue_square"
+        android:layout_centerVertical="true"
+        android:text="查看原文"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/sp_10"
+        android:visibility="invisible" />
+    <!--android:background="@drawable/head_view_icon_bg_no_corner"-->
+
+    <ImageView
+        android:id="@+id/func_left"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_toLeftOf="@+id/func"
+        android:layout_toStartOf="@+id/func"
+        android:background="@drawable/head_view_icon_bg_no_corner"
+        android:scaleType="center"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

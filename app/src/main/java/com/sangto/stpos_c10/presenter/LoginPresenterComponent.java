@@ -1,7 +1,6 @@
 package com.sangto.stpos_c10.presenter;
 
 
-import dagger.Component;
 
 /**
  * @author fpp

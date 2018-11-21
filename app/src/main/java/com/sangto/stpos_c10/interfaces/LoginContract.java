@@ -1,4 +1,4 @@
-package com.sangto.stpos_c10.interf;
+package com.sangto.stpos_c10.interfaces;
 
 import com.sangto.stpos_c10.bean.User;
 

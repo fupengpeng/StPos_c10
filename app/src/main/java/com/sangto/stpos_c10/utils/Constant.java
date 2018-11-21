@@ -38,5 +38,14 @@ public class Constant {
     public static final String TEXT_LARGE_BIG = "TEXT_LARGE_BIG";//特大字体
 
 
+    /**
+     * 用户信息
+     */
+    public static final String USER_INFO = "USER_INFO";
+
+    //退出
+    public static String EXIT_APP = "EXIT_APP";
+
+
 
 }

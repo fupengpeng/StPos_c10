@@ -45,18 +45,9 @@ public class App extends MultiDexApplication implements Thread.UncaughtException
     // 收集日志信息
     private static Map<String, String> infos = new HashMap<>();
     private final String TAG = this.getClass().getSimpleName();
-    // 用于格式化日期,作为日志文件名的一部分
 
     // greenDao  session
     public static DaoSession daoSession;
-
-    // 题目更新动画是否显示
-    public static boolean showUpdateAnim = true;
-
-    /**
-     * 标识网络是否连接
-     */
-    private boolean isNetConnected;
 
     /**
      * Application实例
@@ -74,7 +65,9 @@ public class App extends MultiDexApplication implements Thread.UncaughtException
 
     @Override
     public void onCreate() {
-//      Thread.setDefaultUncaughtExceptionHandler(this);
+        super.onCreate();
+        // 初始化实例
+        instance = this;
         context = getApplicationContext();
         if (mToast == null) {
             mToast = Toast.makeText(context, "", Toast.LENGTH_LONG);
@@ -85,9 +78,8 @@ public class App extends MultiDexApplication implements Thread.UncaughtException
 
         // 初始化数据库
         initDatabase();
-        super.onCreate();
-        // 初始化实例
-        instance = this;
+
+
 
 
     }
@@ -116,7 +108,6 @@ public class App extends MultiDexApplication implements Thread.UncaughtException
      * @param thread 当前线程
      * @param ex     异常
      */
-//
     @Override
     public void uncaughtException(Thread thread, Throwable ex) {
         // 收集设备参数信息

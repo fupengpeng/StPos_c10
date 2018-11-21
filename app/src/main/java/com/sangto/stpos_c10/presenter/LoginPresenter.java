@@ -1,7 +1,7 @@
 package com.sangto.stpos_c10.presenter;
 
 import com.sangto.stpos_c10.bean.User;
-import com.sangto.stpos_c10.interf.LoginContract;
+import com.sangto.stpos_c10.interfaces.LoginContract;
 import com.sangto.stpos_c10.ui.LoginActivity;
 
 import javax.inject.Inject;

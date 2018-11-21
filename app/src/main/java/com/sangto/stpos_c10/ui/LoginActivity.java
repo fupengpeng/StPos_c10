@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.sangto.stpos_c10.R;
 import com.sangto.stpos_c10.bean.User;
-import com.sangto.stpos_c10.interf.LoginContract;
+import com.sangto.stpos_c10.interfaces.LoginContract;
 import com.sangto.stpos_c10.presenter.LoginPresenter;
 
 import javax.inject.Inject;
